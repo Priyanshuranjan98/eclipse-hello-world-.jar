@@ -6,6 +6,6 @@ node{
         sh "mvn clean package"
     }
     stage("Docker Build") {
-        sh "docker build hello-world:1.0 ."
+        sh "docker build -f Dockerfile -t hello-world:1.0"
     }
 }
