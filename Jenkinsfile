@@ -1,11 +1,8 @@
-pipeline {
-    agent any 
-    stages{
-    stage('checkout the project') {
-      steps {
+node{
+    stage("src checkout") {
         git 'https://github.com/prajwal8120/eclipse-hello-world-.jar.git'
-        sh 'mvn clean package'
-      }
     }
-  }
+    stage("Build Package") {
+        sh "mvn clean package"
+    }
 }
