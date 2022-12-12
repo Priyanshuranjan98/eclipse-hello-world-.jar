@@ -8,4 +8,4 @@ node{
     stage("Docker Build") {
         sh "docker build -t hello-world:1.0 ."
     }
-}
+} 
